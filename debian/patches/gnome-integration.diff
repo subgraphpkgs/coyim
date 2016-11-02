@@ -1,0 +1,30 @@
+Description: Adding DE integration and subgraph os defaults
+Author: Subgraph <info@subgraph.com>
+Origin: vendor
+Bug: https://github.com/twstrike/coyim/issues
+Bug-Subgraph: https://github.com/subgraph/subgraph-os-issues/issues
+Forwarded: no
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: coyim-pkg/data/coyim.desktop
+===================================================================
+--- /dev/null
++++ coyim-pkg/data/coyim.desktop
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Version=1.0
++Type=Application
++Name=CoyIM Messenger
++Icon=coyim
++Exec=/usr/bin/coyim
++Terminal=false
+Index: coyim-pkg/data/coyim.gschema.override
+===================================================================
+--- /dev/null
++++ coyim-pkg/data/coyim.gschema.override
+@@ -0,0 +1,2 @@
++[im.coy.coyim.MainSettings]
++single-window=true
+Index: coyim-pkg/data/coyim.png
+===================================================================
+Binary files /dev/null and coyim-pkg/data/coyim.png differ
